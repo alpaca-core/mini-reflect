@@ -16,7 +16,7 @@ if(NOT MINI_REFLECT_HEADER_ONLY)
     target_link_libraries(${tgt} PUBLIC mini-reflect::headers)
 
     if(BUILD_SHARED_LIBS)
-        target_compile_definitions(${tgt} PRIVATE MINI_REFLECT_SHARED)
+        target_compile_definitions(${tgt} PUBLIC MINI_REFLECT_SHARED)
         if(NOT WIN32)
             target_compile_options(${tgt} PRIVATE
                 -fvisibility=hidden
