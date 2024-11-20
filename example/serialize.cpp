@@ -115,7 +115,7 @@ struct string : public my_node {
     }
 };
 
-struct address final : public object {
+struct addr final : public object {
     using object::object;
     string street{i(*this, "street")};
     integer number{i(*this, "number")};
@@ -125,7 +125,7 @@ struct person final : public object {
     using object::object;
     string name{i(*this, "name")};
     integer age{i(*this, "age")};
-    address address{i(*this, "address")};
+    addr address{i(*this, "address")};
 };
 
 int main() {
