@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: MIT
 #
 
+set(CMAKE_CXX_STANDARD 11)
+
 # misc config
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_LINK_DEPENDS_NO_SHARED ON) # only relink exe if .so interface changes

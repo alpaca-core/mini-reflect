@@ -7,7 +7,7 @@ project(mini-reflect
     LANGUAGES CXX
 )
 
-if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+if(PROJECT_IS_TOP_LEVEL)
     set(miniReflectIsRoot YES)
     include(./root-setup.cmake)
 endif()

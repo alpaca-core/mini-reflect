@@ -92,7 +92,7 @@ protected:
 };
 
 iptr i(object& owner, const char* name) {
-    return std::make_unique<my_reflection_info>(owner, name);
+    return iptr{new my_reflection_info(owner, name)};
 }
 
 struct integer final : public my_node {
@@ -129,7 +129,7 @@ struct person final : public object {
 };
 
 int main() {
-    const person schema(std::make_unique<my_reflection_info>());
+    const person schema(iptr{new my_reflection_info});
     schema.print_schema();
 
     auto value = schema;
